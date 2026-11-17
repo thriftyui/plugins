@@ -112,7 +112,15 @@ to refresh). What each changes:
 - **The palette is the user's.** One of three, never mixed: Radix's scales,
   Tailwind's palette, or a shadcn theme (`docs/guides/theming.md`), as
   `palette` above says. `bg-rose-500` works only in a Tailwind or shadcn
-  theme. To change the theme, ask; don't rewrite it.
+  theme. To change the theme, ask; don't rewrite it. In Thrifty Builder the
+  palette is switched in its own theme columns -- App, then the Theme button
+  in the header, the colours in the right-hand column -- which write
+  `.thrifty-builder/theme.json` and the app's `src/theme.css` whole; point
+  the user there rather than editing either file.
+- **Light or dark, when the app has its own switch:** the user's choice in
+  the app wins once they have made it; until then, what a framing page asks
+  (`?theme=` in the address, as Builder's preview sends), then the system's
+  setting. The switch shows the theme in use.
 
 ## Blocks and layout
 
@@ -168,6 +176,14 @@ the defaults where they have not said.
 
 ## Where a new part goes
 
+- **The kit lacks a part: say so, then build it.** Look it up first
+  (`docs/llms.txt`, or the MCP server's `search`). If ThriftyUI has no such
+  part, tell the user in one line, naming the kit's parts it will be built
+  from; then build it as below.
+  ```
+  (a star rating written from scratch, nothing said)                                     // wrong
+  "ThriftyUI has no rating part; I'll build one from its Toggle Group and the theme."   // right
+  ```
 - Only for this app: `src/`.
 - Reusable, and the kit lacks it: where `kit` above is `workspace`,
   `kit/src/`, under `kit/CLAUDE.md`, seen in `kit/playground/`, then used
@@ -180,4 +196,11 @@ the defaults where they have not said.
 - `npm run typecheck` passes.
 - The page seen working -- Thrifty Builder's Preview (App), or the app's dev
   server in a browser -- light and dark, and at a phone's width; the keys
-  its parts' pages list, pressed.
+  its parts' pages list, pressed. Headless Chrome lays a page out no
+  narrower than 500px whatever the window's size: a phone's width is set
+  with the DevTools protocol's device metrics
+  (`Emulation.setDeviceMetricsOverride`), and `innerWidth` read to confirm.
+- **Every control does what its words say.** A switch, button or field that
+  nothing reads yet -- notifications the app cannot send, a name shown
+  nowhere -- is not left looking finished: say so to the user in one line,
+  and word it for what it does, or leave it out until it is connected.

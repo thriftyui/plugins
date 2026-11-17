@@ -172,6 +172,9 @@ still points at it. "Update" does not mean "replace."
 - No reading images, PDFs or long archives unless the user points at a
   specific file -- except a render Claude made to check its own work,
   which is read, because an unread render checks nothing.
+- Claude Code's own transcripts (`~/.claude/projects/`) hold account
+  details: never read to export or share a conversation. A record for
+  another reader is written from the conversation itself.
 
 ### The rules themselves
 
@@ -191,6 +194,14 @@ two sentences -- open line, last result, next task -- and waits. At the
 end, the `session-close` skill files the entry and rewrites the handoff.
 Turning off Claude Code's own auto memory (`autoMemoryEnabled: false` in
 `.claude/settings.json`) keeps state in these files the user can see.
+
+Offered, never done unasked, each in one line: after work seen working, a
+snapshot of it (a git commit), made on a yes; at a natural stopping point,
+saving where things stand for next time (`session-close`), written on a
+yes -- never as the work goes, so no tokens go to records the user did not
+ask for; and before closing, what this session started that still runs --
+dev servers, watchers, with their ports -- stopped on a yes. What another
+session or project started is left alone.
 
 ## Safety catches
 

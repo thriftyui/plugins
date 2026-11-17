@@ -1,6 +1,6 @@
 {
   "name": "baseline",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A working discipline for Claude Code: claims checked against sources or output, state kept in handoff.md and a journal across sessions, nothing deleted or sent out by accident.",
   "author": {
     "name": "ThriftyUI"

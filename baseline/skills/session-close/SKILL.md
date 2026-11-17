@@ -7,6 +7,11 @@ description: File the session's journal entry and update handoff.md at session e
 
 Two writes: append the journal entry, then update `handoff.md`.
 
+Run when the user says yes to closing, or asks for it. Before the writes,
+list what this session started that still runs -- dev servers, watchers,
+background shells, with their ports -- and offer to stop them; leave alone
+what another session or project started.
+
 1. **Audit first.** Re-check every status claim against output actually
    seen this session: a computed or tested result against `runs/` (with no
    run in the log it files as `open`, whatever was said in conversation);
