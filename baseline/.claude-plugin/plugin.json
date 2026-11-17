@@ -1,0 +1,17 @@
+{
+  "name": "baseline",
+  "version": "0.1.6",
+  "description": "A working discipline for Claude Code: claims checked against sources or output, state kept in handoff.md and a journal across sessions, nothing deleted or sent out by accident.",
+  "author": {
+    "name": "ThriftyUI"
+  },
+  "license": "MIT",
+  "userConfig": {
+    "private_emails": {
+      "type": "string",
+      "title": "Email addresses to keep private",
+      "description": "Comma-separated. Never sent to a web fetch, a search or an MCP tool. Your git user.email is kept private without listing it.",
+      "sensitive": true
+    }
+  }
+}

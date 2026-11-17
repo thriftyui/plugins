@@ -1,0 +1,8 @@
+{
+  "name": "thriftyui",
+  "version": "0.1.15",
+  "description": "Build with ThriftyUI, a React UI kit on Radix and Tailwind CSS: Claude looks parts up in the kit's docs, uses its semantic colour scales and blocks, and builds screens from a picture.",
+  "author": { "name": "ThriftyUI" },
+  "homepage": "https://www.thriftyui.com",
+  "license": "MIT"
+}

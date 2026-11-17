@@ -1,0 +1,19 @@
+{
+  "name": "thriftyui-plugins",
+  "owner": {
+    "name": "ThriftyUI"
+  },
+  "description": "ThriftyUI's plugins for Claude Code: building with the kit, and a working discipline for any project.",
+  "plugins": [
+    {
+      "name": "thriftyui",
+      "source": "./thriftyui",
+      "description": "Build with ThriftyUI: the kit's docs, its colours and blocks, an MCP server for looking parts up, and screens from a picture."
+    },
+    {
+      "name": "baseline",
+      "source": "./baseline",
+      "description": "A working discipline: claims checked, state kept in a handoff and journal across sessions, nothing deleted or sent out by accident."
+    }
+  ]
+}
